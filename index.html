@@ -2,26 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Сука Блять</title>
 <style>
 body{
-  z-index: -1
-  overflow: visible;
-}
-iframe{
   z-index: 0;
+  background: black;
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  height: calc(100vw/1.77777777777778);
-  width: 100vw;
+  margin: 0;
+}
+.video,body iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 0;
 }
-/*p{
-
-}*/
+@media (min-aspect-ratio: 16/9){
+  .video{
+    height: 300%;
+    top: -100%;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+  .video{
+    width: 300%;
+    left: -100%;
+    }
+}
+a:link {
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+}
+a:hover {
+  color: grey;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+}
+a:active {
+  color: grey;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+}
+@keyframes retarded {
+  0%    {left: 50vw; top: 5vw;}
+  10%   {left: 51vw; top: 7vw;}
+  20%   {left: 48vw; top: 3vw;}
+  30%   {left: 50vw; top: 6vw;}
+  40%   {left: 52vw; top: 7vw;}
+  50%   {left: 49vw; top: 4vw;}
+  60%   {left: 50vw; top: 7vw;}
+  70%   {left: 51vw; top: 4vw;}
+  80%   {left: 48vw; top: 6vw;}
+  90%   {left: 52vw; top: 5vw;}
+  100%  {left: 49vw; top: 3vw;}
+}
 #cover{
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,14 +76,56 @@ iframe{
   width: 100%;
   opacity: 0;
 }
-#content{
-  z-index: 2;
+#headline{
+  z-index: 1;
   position: fixed;
+  top: 5vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  opacity: 1;
+  color: #ffffff;
+  font-size: 5vw;
+  font-family: Helvetica, sans-serif;
+  animation-name: retarded;
+  animation-direction: normal;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+#line1{
+  z-index: 3;
+  position: fixed;
+  top: 15vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  opacity: 1;
+  color: white;
+  font-size: 3vw;
+  font-family: Helvetica, sans-serif;
+}
+#line2{
+  z-index: 3;
+  position: fixed;
+  top: 25vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  opacity: 1;
+  color: white;
+  font-size: 3vw;
+  font-family: Helvetica, sans-serif;
 }
 </style>
 </head>
 <body>
-<iframe src="https://www.youtube-nocookie.com/embed/J_PwUJGkADI?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;iv_load_policy=3&amp;disablekb=1&amp;showinfo=0&amp;loop=1&amp;playlist=J_PwUJGkADI"><!-- QiFBgtgUtfw --></iframe>
+<div class="video">
+<iframe src="https://www.youtube-nocookie.com/embed/J_PwUJGkADI?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;iv_load_policy=3&amp;disablekb=1&amp;showinfo=0&amp;loop=1&amp;playlist=J_PwUJGkADI"></iframe><!-- QiFBgtgUtfw -->
+</div>
 <div id="cover"></div>
-<div id="content"></div>
+<span id="headline">
+Сука Блять
+</span>
+<p id="line1"><a href="https://discord.gg/yBqKPwu" target="_blank">DISCORD</a><span style="display: inline-block; width: 15vw;"></span><a href="ts3server://ts.impunity-multigaming.de?port=9988" target="_blank">TEAMSPEAK</a></p>
+<p id="line2"><a href="https://steamcommunity.com/groups/babesagainstanime" target="_blank">download japanese animation</a></p>
 </body>
