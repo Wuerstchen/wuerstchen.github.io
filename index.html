@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Wuerstchen</title>
+<title></title>
+<style>
+body{
+  z-index: -1
+  overflow: visible;
+}
+iframe{
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vw/1.77777777777778);
+  width: 100vw;
+  border: 0;
+}
+/*p{
+
+}*/
+#cover{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+#content{
+  z-index: 2;
+  position: fixed;
+
+}
+</style>
 </head>
 <body>
-hello
+<iframe src="https://www.youtube-nocookie.com/embed/J_PwUJGkADI?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;iv_load_policy=3&amp;disablekb=1&amp;showinfo=0&amp;loop=1&amp;playlist=J_PwUJGkADI"> <!-- QiFBgtgUtfw --></iframe>
+<div id="cover"></div>
+<div id="content"></div>
 </body>
-</html>
